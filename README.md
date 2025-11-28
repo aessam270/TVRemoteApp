@@ -43,7 +43,7 @@ Full-featured remote control with navigation, volume, channels, and quick access
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/TVRemoteApp.git
+git clone https://github.com/aessam270/TVRemoteApp.git
 cd TVRemoteApp
 ```
 
@@ -52,9 +52,25 @@ cd TVRemoteApp
 open Package.swift
 ```
 
-3. Build and run:
-- Select your target device (Mac or iOS Simulator)
-- Press `Cmd + R` to build and run
+### Running on iPhone (iOS)
+
+1. **Connect your iPhone** to your Mac with a cable.
+2. In Xcode, select **TVRemoteApp** scheme and choose your **iPhone** from the device list (top bar).
+3. Press `Cmd + R` to build and run.
+4. **Trust Developer**: On your iPhone, go to **Settings > General > VPN & Device Management**, tap your Apple ID, and tap **Trust**.
+5. **Permissions**: When the app launches, tap **Allow** for "Local Network" access to find your TV.
+
+> **Note**: If Xcode doesn't automatically pick up the `Info.plist`, you may need to:
+> 1. Click on the `TVRemoteApp` project icon in the left sidebar.
+> 2. Select the `TVRemoteApp` target.
+> 3. Go to **Build Settings**.
+> 4. Search for "Info.plist File".
+> 5. Set it to `Info.plist`.
+
+### Running on Mac
+
+1. Select **My Mac** from the device list.
+2. Press `Cmd + R`.
 
 ### First Time Setup
 
