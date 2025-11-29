@@ -56,9 +56,16 @@ open Package.swift
 
 1. **Connect your iPhone** to your Mac with a cable.
 2. In Xcode, select **TVRemoteApp** scheme and choose your **iPhone** from the device list (top bar).
-3. Press `Cmd + R` to build and run.
-4. **Trust Developer**: On your iPhone, go to **Settings > General > VPN & Device Management**, tap your Apple ID, and tap **Trust**.
-5. **Permissions**: When the app launches, tap **Allow** for "Local Network" access to find your TV.
+3. **Configure Signing** (Crucial Step):
+   - Click on the **TVRemoteApp** project icon at the top of the left sidebar.
+   - Select the **TVRemoteApp** target in the main view.
+   - Go to the **Signing & Capabilities** tab.
+   - Check **Automatically manage signing**.
+   - Under **Team**, select your Personal Team (Add an Account... if needed).
+   - Ensure **Bundle Identifier** is unique (e.g., `com.yourname.TVRemoteApp`).
+4. Press `Cmd + R` to build and run.
+5. **Trust Developer**: On your iPhone, go to **Settings > General > VPN & Device Management**, tap your Apple ID, and tap **Trust**.
+6. **Permissions**: When the app launches, tap **Allow** for "Local Network" access.
 
 > **Note**: If Xcode doesn't automatically pick up the `Info.plist`, you may need to:
 > 1. Click on the `TVRemoteApp` project icon in the left sidebar.
