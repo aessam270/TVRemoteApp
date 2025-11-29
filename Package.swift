@@ -13,13 +13,9 @@ let package = Package(
             targets: ["TVRemoteApp"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/jareksedy/WebOSClient.git", from: "1.5.1")
-    ],
     targets: [
         .executableTarget(
             name: "TVRemoteApp",
-            dependencies: ["WebOSClient"],
             path: "."
         )
     ]

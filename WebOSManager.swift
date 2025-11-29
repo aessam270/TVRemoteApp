@@ -1,5 +1,5 @@
 import SwiftUI
-import WebOSClient
+
 
 // MARK: - WebOS TV Manager
 class WebOSManager: ObservableObject {
