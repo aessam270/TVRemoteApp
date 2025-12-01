@@ -86,6 +86,24 @@ class WebOSManager: ObservableObject {
         }
     }
     
+    // Launch Netflix
+    func launchNetflix() {
+        guard isConnected else {
+            print("⚠️ Not connected to TV")
+            return
+        }
+        client?.send(.launchApp(appId: "netflix"))
+    }
+    
+    // Switch Input Source
+    func switchInput(_ inputId: String) {
+        guard isConnected else {
+            print("⚠️ Not connected to TV")
+            return
+        }
+        client?.send(.setSource(inputId: inputId))
+    }
+    
     // MARK: - Network Scanning
     
     func scanNetworkForTVs() {

@@ -358,6 +358,9 @@ public enum WebOSTarget {
     case channelUp, channelDown
     case up, down, left, right, enter, back, home, menu, info
     case getPointerInputSocket
+    case launchApp(appId: String)
+    case listSources
+    case setSource(inputId: String)
     
     public var uri: String? {
         switch self {
@@ -374,6 +377,9 @@ public enum WebOSTarget {
         case .channelUp: return "ssap://tv/channelUp"
         case .channelDown: return "ssap://tv/channelDown"
         case .getPointerInputSocket: return "ssap://com.webos.service.networkinput/getPointerInputSocket"
+        case .launchApp: return "ssap://system.launcher/launch"
+        case .listSources: return "ssap://tv/getExternalInputList"
+        case .setSource: return "ssap://tv/switchInput"
         default: return nil
         }
     }
@@ -389,6 +395,10 @@ public enum WebOSTarget {
             return .init(type: .request, uri: uri, payload: WebOSRequestPayload(mute: mute))
         case .turnOff:
             return .init(type: .request, uri: uri, payload: WebOSRequestPayload(standbyMode: "active"))
+        case .launchApp(let appId):
+            return .init(type: .request, uri: uri, payload: WebOSRequestPayload(id: appId))
+        case .setSource(let inputId):
+            return .init(type: .request, uri: uri, payload: WebOSRequestPayload(inputId: inputId))
         default:
             return .init(type: .request, uri: uri)
         }

@@ -10,6 +10,7 @@ targets:
       - .
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.tvremote.TVRemoteApp
+      INFOPLIST_FILE: Info.plist
       INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
       INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
       INFOPLIST_KEY_UILaunchScreen_Generation: YES
@@ -17,3 +18,12 @@ targets:
       INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
       SWIFT_VERSION: "5.0"
       ENABLE_DEBUG_DYLIB: YES
+    excludes:
+      - "*.xcodeproj"
+      - ".build"
+      - ".swiftpm"
+      - "Package.swift"
+      - "Package.swift.backup"
+
+
+
